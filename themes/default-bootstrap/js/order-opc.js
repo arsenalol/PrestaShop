@@ -26,6 +26,7 @@ $(document).ready(function(){
 	// GUEST CHECKOUT / NEW ACCOUNT MANAGEMENT
 	if ((typeof isLogged == 'undefined' || !isLogged) || (typeof isGuest !== 'undefined' && isGuest))
 	{
+		if(typeof guestCheckoutEnabled == "undefined") var guestCheckoutEnabled = 0;
 		if (guestCheckoutEnabled && !isLogged && !isGuest)
 		{
 			$('#opc_account_choice').show();
